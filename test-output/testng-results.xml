@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2655" started-at="2018-03-25T14:50:32Z" finished-at="2018-03-25T14:50:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2655" started-at="2018-03-25T14:50:32Z" finished-at="2018-03-25T14:50:34Z">
+      <class name="com.qa.apitest.GetAPITest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.apitest.GetAPITest@5622fdf]" name="setUp" is-config="true" duration-ms="7" started-at="2018-03-25T14:50:32Z" finished-at="2018-03-25T14:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getAPiTest_TCC01()[pri:1, instance:com.qa.apitest.GetAPITest@5622fdf]" name="getAPiTest_TCC01" duration-ms="1592" started-at="2018-03-25T14:50:32Z" finished-at="2018-03-25T14:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPiTest_TCC01 -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.apitest.GetAPITest@5622fdf]" name="setUp" is-config="true" duration-ms="0" started-at="2018-03-25T14:50:33Z" finished-at="2018-03-25T14:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getAPiTestWithParameter_TCC02()[pri:2, instance:com.qa.apitest.GetAPITest@5622fdf]" name="getAPiTestWithParameter_TCC02" duration-ms="191" started-at="2018-03-25T14:50:33Z" finished-at="2018-03-25T14:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPiTestWithParameter_TCC02 -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.apitest.GetAPITest@5622fdf]" name="setUp" is-config="true" duration-ms="1" started-at="2018-03-25T14:50:34Z" finished-at="2018-03-25T14:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyJsonResponse_TCC03()[pri:3, instance:com.qa.apitest.GetAPITest@5622fdf]" name="verifyJsonResponse_TCC03" duration-ms="146" started-at="2018-03-25T14:50:34Z" finished-at="2018-03-25T14:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyJsonResponse_TCC03 -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.apitest.GetAPITest@5622fdf]" name="setUp" is-config="true" duration-ms="1" started-at="2018-03-25T14:50:34Z" finished-at="2018-03-25T14:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="verifyJsonResponse_TCC04()[pri:4, instance:com.qa.apitest.GetAPITest@5622fdf]" name="verifyJsonResponse_TCC04" duration-ms="682" started-at="2018-03-25T14:50:34Z" finished-at="2018-03-25T14:50:34Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [light rain] but found [broken clouds]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [light rain] but found [broken clouds]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.qa.apitest.GetAPITest.verifyJsonResponse_TCC04(GetAPITest.java:110)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyJsonResponse_TCC04 -->
+      </class> <!-- com.qa.apitest.GetAPITest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
