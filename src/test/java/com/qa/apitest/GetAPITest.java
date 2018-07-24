@@ -1,14 +1,8 @@
 package com.qa.apitest;
 
 import static com.jayway.restassured.RestAssured.*;
-import groovy.xml.Entity;
 
-import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -16,13 +10,12 @@ import org.testng.annotations.Test;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
 import com.qa.testbase.TestBase;
 import com.qa.util.JsonReaderUtility;
-import com.qa.util.ParameterMap;
+
 
 public class GetAPITest extends TestBase {
-	ParameterMap mapObject;
+	
 	TestBase testBaseObject;
 	String apiUrl;
 
@@ -41,27 +34,13 @@ public class GetAPITest extends TestBase {
 		int statusCode = responseJSON.getStatusCode();
 
 		Assert.assertEquals(statusCode,
-				testBaseObject.RESPONSE_STATUS_CODE_200,
+				TestBase.RESPONSE_STATUS_CODE_200,
 				"Status code not Matched");
 	}
-//With Query Parameter
-	@Test(priority = 2)
-	public void getAPiTestWithParameter_TCC02() {
 
-		RequestSpecification rs = given();
-		                          Map<String, String> map = mapObject.getParameter();
-		                          for (Map.Entry<String, String> entry : map.entrySet()) {
-			                      rs.parameter(entry.getKey(), entry.getValue());
-		                          }
-		                          rs.when().get(apiUrl).
-		                          then().assertThat().statusCode(RESPONSE_STATUS_CODE_200)	;  
-		                        		 
-	
-		
-	}
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void verifyJsonResponse_TCC03() {
 
 	   Response jsonResponse=    given().
@@ -97,7 +76,7 @@ public class GetAPITest extends TestBase {
 	}
 	
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void verifyJsonResponse_TCC04() {
 
 	  String weatherInforamtion= given().
